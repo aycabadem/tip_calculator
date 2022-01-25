@@ -70,11 +70,16 @@ class _MyAppState extends State<MyApp> {
   }
 
   void updateSelection(int selectedIndex) {
-    setState(() {
-      for (int i = 0; i < _selection.length; i++) {
-        _selection[i] = selectedIndex == i;
-      }
-    });
+    for (int i = 0; i < _selection.length; i++) {
+      // if (selectedIndex == i) {
+      //   _selection[i] = true;
+      // } else {
+      //   _selection[i] = false;
+      // }
+
+      _selection[i] = selectedIndex == i;
+    }
+    setState(() {});
   }
 
   void calculateTip() {
